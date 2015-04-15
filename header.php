@@ -19,7 +19,7 @@
     <div class="header">
         <div class="wrap_1280">
             <div class="logo">
-                <a href='/picapicaplaza/index.php' title=""
+                <a href='/picapicaplaza/index.php' title="PicaPicaPlaza"
             </div>
         </div>
     </div>
