@@ -19,10 +19,43 @@
     <div class="header">
         <div class="wrap_1280">
             <div class="logo">
-                <a href='/picapicaplaza/index.php' title="PicaPicaPlaza"
+                <!-- Notice the WordPress function that dynamically creates the path to your theme -->
+                <a href='/picapicaplaza/index.php' title="PicaPica Plaza"><img src="<?php echo get_template_directory_uri(); ?>/images/Pica-Pica-Logo.png" alt="PicaPica Plaza"></a>
             </div>
+
+            <div class="social-icons-header">
+                <div class="social-wrap pull-right">
+                    <div class="social-icons"><a href="http://www.facebook.com" target="_black"><img src="<?php echo get_template_directory_uri(); ?>/images/small-facebook.png" alt="Facebook Icon"></div>
+                    <div class="social-icons"><a href="http://www.youtube.com" target="_black"><img src="<?php echo get_template_directory_uri(); ?>/images/small-youtube.png" alt="youtube Icon"></div>
+                    <div class="social-icons"><a href="http://www.twitter.com" target="_black"><img src="<?php echo get_template_directory_uri(); ?>/images/small-twitter.png" alt="twitter Icon"></div>
+                    <div class="social-icons"><a href="http://www.yelp.com" target="_black"><img src="<?php echo get_template_directory_uri(); ?>/images/small-yelp.png" alt="yelp Icon"></div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
         </div>
     </div>
 
-</body>
-</html>
+    <div class="navigation-wrapper">
+        <div class="wrap_1280">
+            <div class="navigation">
+                <!-- This is a build in function that determines if on a mobile device or not -->
+                <?php if (!wp_is_mobile()) {?>
+                    <div class="menu-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <!-- This is where you dynamically call your main manu -->
+                        <?php wp_nav_menu(array('theme_location' => 'top-menu')); ?>
+                    </div>
+                <?php } ?>
+                <div class="toggle">
+                    <a href="#" id="responsive-top-nav-button">MENU</a>
+                </div>
+                <!-- This is where you dynamically call your mobile menu -->
+                <div class="responsive-top-navigation">
+                    <?php wp_nav_menu(array('theme_location' => 'mobile-menu')); ?>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
