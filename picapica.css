@@ -1,0 +1,53 @@
+/*
+Theme Name: PicaPica Plaza
+Author: Ashley Falsario for WebTegrity
+Author URI: http://webtegrity.com
+Description: Custom theme for PicaPica Plaza
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: picapicaplaza
+*/
+
+.logo img {
+    margin-left:auto;
+    margin-right: auto;
+    display: block;
+    max-width:100%;
+    padding: 40px;
+}
+
+.top-bar {
+    background:#78A22F;
+}
+
+.social-icons {
+    float:left;
+    margin-left: 1em;
+    margin-top:.5em;
+}
+
+div.banner{
+    background: url("images/three-banner.png") repeat-x;
+    height: 46px;
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button) {
+    background-color: #78a22f;
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button):hover {
+    background-color: #8CBC39;
+}
+
+.top-bar.expanded .title-area {
+    background-color: #78a22f;
+}
+
+.top-bar.expanded .toggle-topbar a {
+    color: #FFF;
+}
+
+.top-bar.expanded .toggle-topbar a span::after {
+    box-shadow: 0 0 0 1px #FFF,0 7px 0 1px #FFF,0 14px 0 1px #FFF;
+}
