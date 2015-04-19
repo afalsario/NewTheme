@@ -51,7 +51,7 @@ function picapicaplaza_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'top-menu' => __( 'Top Menu', 'picapicaplaza' ),
-		'mobile-menu' => __( 'Mobile Menu', 'picapicaplaza' )
+		'primary-menu' => __( 'Primary Menu', 'picapicaplaza' )
 	) );
 
 	/*
@@ -75,6 +75,8 @@ function picapicaplaza_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	add_theme_support( 'post-thumbnails' ); 
 }
 endif; // picapicaplaza_setup
 add_action( 'after_setup_theme', 'picapicaplaza_setup' );
@@ -128,6 +130,18 @@ function register_my_scripts() {
 }
 
 add_action('wp_print_scripts','register_my_scripts');
+
+// Google Fonts
+
+function load_google_fonts() {
+        wp_register_style('googleFontsDeliusSwashCaps','http://fonts.googleapis.com/css?family=Delius+Swash+Caps');
+        wp_enqueue_style( 'googleFontsDeliusSwashCaps');
+
+        wp_register_style('googleFontsMontserrat','http://fonts.googleapis.com/css?family=Montserrat');
+        wp_enqueue_style( 'googleFontsMontserrat');
+
+}
+add_action('wp_print_styles', 'load_google_fonts');
 
 /**
  * Implement the Custom Header feature.

@@ -10,12 +10,14 @@
 
 	</div><!-- #content -->
 
+    <div id="footer-info"></div>
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
+		<!-- <div class="row site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'picapicaplaza' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'picapicaplaza' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'picapicaplaza' ), 'picapicaplaza', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+		</div> -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

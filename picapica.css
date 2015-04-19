@@ -9,6 +9,31 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: picapicaplaza
 */
 
+/*
+
+MENU
+---------------
+1. HEADER
+    -TOP NAV
+    -PRIMARY NAV
+2. FOOTER
+
+*/
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Delius Swash Caps', cursive;
+    color: #b6246b;
+}
+
+
+
+
+/*HEADER*/
 .logo img {
     margin-left:auto;
     margin-right: auto;
@@ -17,19 +42,40 @@ Text Domain: picapicaplaza
     padding: 40px;
 }
 
-.top-bar {
-    background:#78A22F;
+.social-icons-header {
+    margin-left: 1rem;
 }
 
-.social-icons {
+.social-icons-header li{
+    display: inline-block;
     float:left;
-    margin-left: 1em;
+    padding-right: .5em;
+    padding-left:.5em;
     margin-top:.5em;
+}
+
+ul.social-icons-header:hover li{
+    opacity:.8;
+}
+ul.social-icons-header li:hover{
+    opacity: 1;
 }
 
 div.banner{
     background: url("images/three-banner.png") repeat-x;
     height: 46px;
+}
+
+/*TOP NAV*/
+
+.top-bar-section ul li>a, .top-bar .toggle-topbar a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.top-bar {
+    background:#78A22F;
 }
 
 .top-bar-section li.active:not(.has-form) a:not(.button) {
@@ -51,3 +97,95 @@ div.banner{
 .top-bar.expanded .toggle-topbar a span::after {
     box-shadow: 0 0 0 1px #FFF,0 7px 0 1px #FFF,0 14px 0 1px #FFF;
 }
+
+/*PRIMARY NAV*/
+
+#primary-nav {
+    height:43px;
+    width: 100%;
+    background-color: #cbee71;
+}
+
+.primary-nav-block {
+    text-align: center;
+}
+
+.primary-nav-block ul {
+    display: inline-block;
+    margin:0;
+    padding:0px;
+    line-height: 1.8;
+}
+
+.primary-nav-block li {
+    list-style: none;
+    float:left;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Delius Swash Caps', cursive;
+    font-size: 1.5em;
+}
+
+#menu-primary-menu > li:first-child a{
+    color:#5c2c90;
+}
+
+#menu-primary-menu > li:nth-child(2) a{
+    color:#ea2027;
+}
+
+#menu-primary-menu > li:nth-child(3) a{
+    color:#1e73be;
+}
+
+#menu-primary-menu > li:nth-child(4) a{
+    color:#f4811f;
+}
+
+#menu-primary-menu li:hover{
+    background-color: #dcf991;
+}
+
+/*FOOTER*/
+
+#colophon {
+    background-color: #78a22f;
+    height:45px;
+}
+
+#footer-info {
+    background-color: #cbee71;
+    height:272.97px;
+}
+
+#event {
+    height:170px;
+    width:100%;
+    background-color: #b6246b;
+}
+
+div#event-photo-box {
+    position: absolute;
+    width:255px;
+    height:136px;
+    overflow: hidden;
+    margin: 16px;
+}
+
+#event-photo-box img{
+    position: relative;
+    margin-top: -25%;
+
+}
+
+@media only screen and (max-width: 366px) {
+
+   .primary-nav-block li {
+    font-size: 1.3em;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+
+
+}
+
