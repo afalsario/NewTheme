@@ -43,7 +43,11 @@
 		</div>
 	</div>
 
-	<div class="clearfix"></div>
-Space
 <?php endif; ?>
+
+<div class="clearfix"></div>
+
+<div class="row">
+	<h1 class="scroll-pattern">Eat</h1>
+</div>
 
