@@ -104,6 +104,7 @@ div.banner{
     height:43px;
     width: 100%;
     background-color: #cbee71;
+    overflow: hidden;
 }
 
 .primary-nav-block {
@@ -159,25 +160,51 @@ div.banner{
 }
 
 #event {
-    height:170px;
+    height:auto;
     width:100%;
     background-color: #b6246b;
 }
 
-div#event-photo-box {
-    position: absolute;
-    width:255px;
-    height:136px;
-    overflow: hidden;
-    margin: 16px;
+/*img.wp-post-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+.event-photo-box{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 30px;
 }
 
-#event-photo-box img{
-    position: relative;
-    margin-top: -25%;
-
+.feature-button { 
+    width:200px;
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: #F47321;
+    font-family: 'Montserrat', sans-serif;
 }
 
+a.feature-button {
+    color:white;
+}
+
+.feature-button:hover {
+    background-color: #E76310;
+}
+
+.feature-content {
+    padding: 30px;
+}
+.feature-content p {
+    margin-bottom: 0px;
+    color: white;
+} 
 @media only screen and (max-width: 366px) {
 
    .primary-nav-block li {
@@ -185,7 +212,6 @@ div#event-photo-box {
     padding-left: 10px;
     padding-right: 10px;
     }
-
 
 }
 

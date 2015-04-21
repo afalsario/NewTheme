@@ -21,11 +21,11 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php wp_footer(); ?>
 
 <script>
   $(document).foundation();
 </script>
 
+<?php wp_footer(); ?>
 </body>
 </html>
