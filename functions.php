@@ -96,14 +96,53 @@ function picapicaplaza_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+	register_sidebar( array(
+		'name'          => __( 'Home Page Sidebar', 'picapicaplaza' ),
+		'id'            => 'homepage-sidebar',
+		'description'   => 'Widget area for slider',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer Left', 'picapicaplaza' ),
+		'id'            => 'footer-left',
+		'description'   => 'Left widget area for footer',
+		'before_widget' => '<div class="footer-left">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer Center', 'picapicaplaza' ),
+		'id'            => 'footer-center',
+		'description'   => 'Center widget area for footer',
+		'before_widget' => '<div class="footer-center">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer Right', 'picapicaplaza' ),
+		'id'            => 'footer-right',
+		'description'   => 'Right widget area for footer',
+		'before_widget' => '<div class="footer-right">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
 }
 add_action( 'widgets_init', 'picapicaplaza_widgets_init' );
 
+add_filter('widget_text', 'do_shortcode');
 /**
  * Enqueue scripts and styles.
  */
 function picapicaplaza_scripts() {
 	wp_enqueue_style( 'foundation_css', '//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css' );
+
+	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 	wp_enqueue_style( 'picapicaplaza-style', get_stylesheet_uri() );
 
