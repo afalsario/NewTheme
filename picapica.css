@@ -123,7 +123,7 @@ div.banner{
     padding-left: 15px;
     padding-right: 15px;
     font-family: 'Delius Swash Caps', cursive;
-    font-size: 1.5em;
+    font-size: 24px;
 }
 
 #menu-primary-menu > li:first-child a{
@@ -181,7 +181,7 @@ div#event-photo-box {
 @media only screen and (max-width: 366px) {
 
    .primary-nav-block li {
-    font-size: 1.3em;
+    font-size: 1em;
     padding-left: 10px;
     padding-right: 10px;
     }
