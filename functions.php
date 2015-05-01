@@ -91,16 +91,34 @@ function picapicaplaza_widgets_init() {
 		'name'          => __( 'Sidebar', 'picapicaplaza' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'before_widget' => '<div class="sidebar">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Blog Sidebar', 'picapicaplaza' ),
+		'id'            => 'blog-sidebar',
+		'description'   => '',
+		'before_widget' => '<div class="sidebar">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Home Page Slider Widget', 'picapicaplaza' ),
+		'id'            => 'homepage-widget',
+		'description'   => 'Widget area for slider',
+		'before_widget' => '<aside id="" class="widget">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Home Page Sidebar', 'picapicaplaza' ),
-		'id'            => 'homepage-sidebar',
-		'description'   => 'Widget area for slider',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'name'          => __( 'Home Page Calendar Widget', 'picapicaplaza' ),
+		'id'            => 'calendar-widget',
+		'description'   => 'Widget area for calendar',
+		'before_widget' => '<aside id="" class="widget">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
@@ -160,10 +178,10 @@ add_action( 'wp_enqueue_scripts', 'picapicaplaza_scripts' );
 
 function register_my_scripts() {
   wp_deregister_script('jquery');
-  wp_register_script('jquery', "http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js", array(),'2.1.0',false);
-  wp_register_script('modernizer', get_template_directory_uri()."/js/vendor/modernizr.js",array(),'2.7.1', false);
-  wp_register_script('foundation', get_template_directory_uri()."/js/foundation.min.js", array('jquery'),'5.1.1',true); 
-  wp_register_script('top-bar', get_template_directory_uri()."/js/foundation.topbar.js",array(),'null', false);
+  wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-1.11.2.min.js', array(),'2.1.0',false);
+  wp_enqueue_script('modernizer',get_template_directory_uri() . '/js/vendor/modernizr.js',array(),'2.7.1', false);
+  wp_enqueue_script('foundation', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'),'5.1.1',true);
+  wp_enqueue_script('top-bar', get_template_directory_uri() . '/js/foundation/foundation.topbar.js',array(),'5.5.1', false);
 
   wp_enqueue_script(array('jquery','modernizer','foundation'));
 }

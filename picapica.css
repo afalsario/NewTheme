@@ -14,11 +14,19 @@ Text Domain: picapicaplaza
 MENU
 ---------------
 BODY/OVERALL STYLES
+FULL WIDTH TEMPLATE
+BLOG
+SINLGE BLOG
+SIDEBAR
 HEADER
     -TOP NAV
     -PRIMARY NAV
 HOURS/INFO BOX
 FEATURE BOX
+CONTENT SECTION
+    -CALENDAR WIDGET
+    -PARALLAX SECTION
+PLAY/EVENTS PAGE
 FOOTER
 MEDIA STYLES
 
@@ -36,17 +44,134 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 40px;
 }
 
-/*HEADER*/
+a:visited{
+    color: #b6246b;
+}
+
+a {
+    color: #b6246b;
+}
+
+a:hover {
+    color:#f4811f;
+}
+
+h1.entry-title, h1.sidebar, .comments-title {
+    font-size: 30px;
+
+}
+
+h1.entry-title a:visited {}
+
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
+    max-width:300px;
+}
+
+.leasing-list li {
+    margin-bottom: 10px;
+    color: #7DA536;
+}
+
+.fa-star-o {
+    color: #f4811f;
+}
+
+.cta {
+    width: 100%;
+    background-color: #b6246b;
+    height: auto;
+}
+
+blockquote {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    max-width: 500px;
+    margin: 0.25em auto;
+    padding: 0.35em 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #FFF;
+    border: none;
+}
+
+blockquote p {
+    color: #FFF;
+}
+
+blockquote:before {
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    color: #FFF;
+}
+
+blockquote cite {
+    color: #f4811f;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+
+blockquote cite:before {
+    content: "\2014 \2009";
+}
+
+/*******************************SIDEBAR*******************************/
+
+
+.sidebar h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+.sidebar li {
+    list-style: none;
+}
+
+.sidebar {
+    border: 2px solid #cbee71;
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    padding: 15px;
+}
+
+/*******************************FULL WIDTH TEMPLATE*******************************/
+
+h1.fullwidth {
+    text-align: center;
+}
+
+/*******************************BLOG*******************************/
+
+h1.news-titles, h1.page-titles{
+    text-align: center;
+}
+
+.news-box {
+    border: 2px solid #cbee71;
+    margin-bottom: 10px;
+}
+
+/*******************************SINGLE BLOG*******************************/
+
+.padding {
+    height: 50px;
+}
+
+/*******************************HEADER*******************************/
 .logo img {
     margin-left:auto;
     margin-right: auto;
     display: block;
     max-width:100%;
     padding: 40px;
-}
-
-.social-icons-header {
-    margin-left: 1rem;
 }
 
 .social-icons-header li{
@@ -69,7 +194,7 @@ div.banner{
     height: 46px;
 }
 
-/*TOP NAV*/
+/*******************************TOP NAV*******************************/
 
 .top-bar-section ul li>a, .top-bar .toggle-topbar a{
     font-family: 'Montserrat', sans-serif;
@@ -101,7 +226,7 @@ div.banner{
     box-shadow: 0 0 0 1px #FFF,0 7px 0 1px #FFF,0 14px 0 1px #FFF;
 }
 
-/*PRIMARY NAV*/
+/*******************************PRIMARY NAV*******************************/
 
 #primary-nav {
     height:43px;
@@ -150,7 +275,7 @@ div.banner{
     background-color: #dcf991;
 }
 
-/*HOURS/INFO BOX*/
+/*******************************HOURS/INFO BOX*******************************/
 
 .hours h1{
     font-size: 40px;
@@ -173,10 +298,7 @@ div.banner{
 }
 
 
-
-
-
-/*FEATURE BOX*/
+/*******************************FEATURE BOX*******************************/
 .event-photo-box{
     display: block;
     margin-left: auto;
@@ -212,7 +334,152 @@ a.feature-button {
     color: white;
 }
 
-/*FOOTER*/
+/*******************************CONTENT SECTION*******************************/
+
+h1.section-divider {
+    font-size: 42px;
+    text-align: center;
+}
+
+h1.section-divider:before {
+  content: "";
+  background-image: url('images/divider.jpg');
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 20.5%;
+  padding-top: 35px;
+  margin-right: 20px;
+
+}
+
+h1.section-divider:after {
+  content: "";
+  background-image: url('images/divider.jpg');
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 20.5%;
+  padding-top: 35px;
+  margin-left: 20px;
+
+}
+
+.section-text {
+    color: #b6246b;
+    font-size: 20px;
+    text-align: center;
+}
+
+.section-button {
+    background-color:#B6246B;
+}
+
+button.small, .button.small{
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width:150px;
+}
+
+a.section-button {
+    color: #FFF;
+}
+
+.section-button a:visited {
+    color: #FFF;
+}
+
+.section-button:hover {
+    background-color:#ea2e89;
+    color: #FFF;
+}
+
+.section-image {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    padding:20px;
+    max-height: 500px;
+
+}
+
+.activities-image {
+    display: block;
+    padding:20px;
+    height:auto;
+    width:auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+iframe {
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    padding:20px;
+}
+
+/*******************************PARALLAX SECTION*******************************/
+
+.parallax {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.60), 
+      rgba(0, 0, 0, 0.60)
+    ),
+    url("images/live-performance.JPG") ;
+    background-size: 1500px auto;
+    background-attachment: fixed;
+    background-position: center;
+    height:300px;
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+
+}
+
+.parallax p {
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: #CBEE71;
+}
+
+/*******************************CALENDAR WIDGET*******************************/
+
+.calendar {
+    min-height:400px;
+    max-width:553px;
+    margin:20px;
+    border: 2px solid #cbee71;
+    padding:20px;
+}
+
+.calendar h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.calendar h4 {
+    font-size: 20px;
+}
+
+.calendar ol {
+    list-style: none;
+    margin-left: 0;
+}
+
+/*******************************PLAY/EVENTS PAGE*******************************/
+
+#tribe-bar-form .tribe-bar-submit input[type=submit] {
+    background-color: #b6246b;
+}
+
+
+/*******************************FOOTER*******************************/
 
 #colophon {
     background-color: #78a22f;
@@ -221,7 +488,6 @@ a.feature-button {
 
 #footer-info {
     background-color: #cbee71;
-    height:272.97px;
 }
 
 #event {
@@ -235,21 +501,17 @@ div.widget .logo {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    margin: 15px auto;
 
 }
 
-h1.widget-title {
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.widget {
-    margin-top: 20px;
-    padding-left: 40px;
+#footer-info div.widget {
+    margin-bottom: 0px;
 }
 
 .footer-left {
     margin-bottom: 0px;
+    padding:15px;
 }
 
 .footer-left ul li {
@@ -297,13 +559,18 @@ a:hover{
   color: #f4811f;
 }
 
-.footer-right h1 {
-    margin: 0 0 10px 0;
+.footer-right {
+    padding:15px;
 }
 
 .footer-right ul {
     list-style: none;
     margin: 0px;
+}
+
+.footer-right .widget-title {
+    margin-bottom: 10px;
+    margin-top: 0px;
 }
 
 .footer-right ul li a {
@@ -320,8 +587,41 @@ a:hover{
     color: #f4811f;
 }
 
+.footer-center {
+    padding:15px;
+}
 
-/*MEDIA STYLES*/
+.big-social-icons {
+    text-align: center;
+}
+
+.big-social-icons img{
+    margin: 20px;
+}
+
+.social-icons-header:hover a{
+    opacity:.5;
+}
+.social-icons-header a:hover{
+    opacity: 1;
+}
+
+#tagline {
+    height:96px;
+    background-color: #78a22f;
+    position:relative;
+}
+
+#tagline h2 {
+    color: #cbee71;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+/*******************************MEDIA STYLES*******************************/
 @media only screen and (max-width: 366px) {
 
    .primary-nav-block li {
@@ -329,6 +629,7 @@ a:hover{
     padding-left: 10px;
     padding-right: 10px;
     }
+
 
 }
 

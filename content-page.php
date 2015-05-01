@@ -5,14 +5,14 @@
  * @package picapicaplaza
  */
 ?>
-<div class="row">
+
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<?php the_post_thumbnail(); ?>
 		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php the_title( '<h1 class="entry-title page-titles">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
-not front-page
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages( array(
@@ -26,4 +26,4 @@ not front-page
 			<?php edit_post_link( __( 'Edit', 'picapicaplaza' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-footer -->
 	</article><!-- #post-## -->
-</div>
+
