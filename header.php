@@ -34,10 +34,10 @@
             <ul class="title-area">
                 <li class="name">
                     <ul class="social-icons-header">
-                        <li><a href="http://www.facebook.com" target="_black"><img src="<?php echo get_template_directory_uri(); ?>/images/small-facebook.jpg" alt="Facebook Icon"></li>
-                        <li><a href="http://www.youtube.com" target="_black"><img src="<?php echo get_template_directory_uri(); ?>/images/small-youtube.jpg" alt="youtube Icon"></li>
-                        <li><a href="http://www.twitter.com" target="_black"><img src="<?php echo get_template_directory_uri(); ?>/images/small-twitter.jpg" alt="twitter Icon"></li>
-                        <li><a href="http://www.yelp.com" target="_black"><img src="<?php echo get_template_directory_uri(); ?>/images/small-yelp.jpg" alt="yelp Icon"></li>
+                        <li><a href="http://www.facebook.com/picapicaplaza" target="_black"><img src="<?php echo get_template_directory_uri(); ?>/images/small-facebook.jpg" alt="Facebook Icon"></li>
+                        <li><a href="http://www.youtube.com/picapicaplaza" target="_black"><img src="<?php echo get_template_directory_uri(); ?>/images/small-youtube.jpg" alt="youtube Icon"></li>
+                        <li><a href="http://www.twitter.com/picapicaplaza" target="_black"><img src="<?php echo get_template_directory_uri(); ?>/images/small-twitter.jpg" alt="twitter Icon"></li>
+                        <li><a href="http://www.yelp.com/biz/pica-pica-plaza-san-antonio" target="_black"><img src="<?php echo get_template_directory_uri(); ?>/images/small-yelp.jpg" alt="yelp Icon"></li>
                     </ul>
                     <h1><a href="#"></a></h1>
                 </li>
@@ -66,13 +66,11 @@
             <!-- Notice the WordPress function that dynamically creates the path to your theme -->
             <a href='/picapicaplaza/' title="PicaPica Plaza"><img src="<?php echo get_template_directory_uri(); ?>/images/Pica-Pica-Logo.png" alt="PicaPica Plaza"></a>
         </div>
-
-        <div id="primary-nav">
-            <div class="primary-nav-block">
-            <?php wp_nav_menu(array('theme_location' => 'primary-menu')); ?>
-            </div>
+        <div class="nav-box">
+            <nav id="site-navigation" class="main-navigation" role="navigation">
+                <?php wp_nav_menu(array('theme_location' => 'primary-menu', 'menu_id' => 'primary-menu' )); ?>
+            </nav>
         </div>
-        
 
 	</header><!-- #masthead -->
 

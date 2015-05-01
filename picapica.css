@@ -228,52 +228,66 @@ div.banner{
 
 /*******************************PRIMARY NAV*******************************/
 
-#primary-nav {
-    height:43px;
+.nav-box {
+    height:2.8125rem;
     width: 100%;
     background-color: #cbee71;
-    overflow: hidden;
-}
-
-.primary-nav-block {
     text-align: center;
+    z-index: 1;
 }
 
-.primary-nav-block ul {
+.nav-box ul {
     display: inline-block;
     margin:0;
     padding:0px;
-    line-height: 1.8;
+    line-height: 2.8125rem;
 }
 
-.primary-nav-block li {
+.nav-box li {
     list-style: none;
-    float:left;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: .5em;
+    padding-right: .5em;
     font-family: 'Delius Swash Caps', cursive;
     font-size: 24px;
 }
 
-#menu-primary-menu > li:first-child a{
+.main-navigation ul ul {
+    box-shadow: none;
+}
+
+.sub-menu li{
+    background-color: #cbee71;
+    margin-left: -36px;
+}
+
+.sub-menu li:first-child {
+    margin-top: 20px;
+}
+
+.sub-menu li:hover a {
+    background-color: #dcf991;
+}
+
+.nav-box li:hover{
+    background-color: #dcf991;
+}
+
+#primary-menu > li:first-child a{
     color:#5c2c90;
 }
 
-#menu-primary-menu > li:nth-child(2) a{
+#primary-menu > li:nth-child(2) a{
     color:#ea2027;
 }
 
-#menu-primary-menu > li:nth-child(3) a{
+#primary-menu > li:nth-child(3) a{
     color:#1e73be;
 }
 
-#menu-primary-menu > li:nth-child(4) a{
+#primary-menu > li:nth-child(4) a{
     color:#f4811f;
 }
 
-#menu-primary-menu li:hover{
-    background-color: #dcf991;
-}
 
 /*******************************HOURS/INFO BOX*******************************/
 
@@ -624,8 +638,8 @@ a:hover{
 /*******************************MEDIA STYLES*******************************/
 @media only screen and (max-width: 366px) {
 
-   .primary-nav-block li {
-    font-size: 1em;
+   .nav-box li {
+    font-size: 16px;
     padding-left: 10px;
     padding-right: 10px;
     }
